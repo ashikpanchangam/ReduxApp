@@ -2,16 +2,23 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { selectBook } from './../actions/index';
 import { bindActionCreators } from 'redux';
+import { Image, List } from 'semantic-ui-react';
 
 class BookList extends Component {
   renderList(){
     return this.props.books.map((book) => {
       return (
-        <li key={book.title}
-          onClick={() => this.props.selectBook(book)}
-          className="list-group-item">
-          {book.title}
-        </li>
+        // <li key={book.title}
+        //   onClick={() => this.props.selectBook(book)}
+        //   className="list-group-item">
+        //   {book.title}
+        // </li>
+          <List.Item key={book.title}
+            onClick={() => this.props.selectBook(book)}>
+              <List.Content>
+                <List.Header as='a'>{book.title}</List.Header>
+              </List.Content>
+          </List.Item>
       );
     });
   }

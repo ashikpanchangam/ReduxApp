@@ -1,4 +1,4 @@
-# ReduxSimpleStarter
+# ReduxApp
 
 ### Getting Started
 
