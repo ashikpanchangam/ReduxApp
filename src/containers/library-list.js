@@ -35,12 +35,12 @@ function mapStateToProps(state) {
 // Anything returned from this function will end up as props
 // on the library list container
 function mapDispatchToProps(dispatch){
-  // Whenever a selec is called, the result should be passed
+  // Whenever a select is called, the result should be passed
   // to all of our reducers
   return bindActionCreators({selectLibrary: selectLibrary}, dispatch);
 }
 
 // Promomote LibraryList from a component to a container - it needs to
-// know about this new dispath method, selectLibrary. Make it
+// know about this new dispatch method, selectLibrary. Make it
 // available as a prop
 export default connect(mapStateToProps, mapDispatchToProps)(LibraryList);
