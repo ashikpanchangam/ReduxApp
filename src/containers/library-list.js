@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { selectLibrary } from './../actions/index';
 import { bindActionCreators } from 'redux';
-import { Image, List } from 'semantic-ui-react';
 
 class LibraryList extends Component {
   renderList(){
